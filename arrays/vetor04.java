@@ -18,10 +18,10 @@ public class vetor04 {
 		System.out.println("Quantas pessoas serao digitas? ");
 		int qtdPessoas = sc.nextInt();
 		
-		Pessoa[] vetor = new Pessoa[qtdPessoas];
+		Pessoa[] pessoas = new Pessoa[qtdPessoas];
 		
 		
-		for(int i = 0; i < vetor.length; i++) {
+		for(int i = 0; i < pessoas.length; i++) {
 			sc.nextLine();
 			System.out.printf("Dados da %da pessoa:\n", i + 1);
 
@@ -34,19 +34,20 @@ public class vetor04 {
 			System.out.print("Altura: ");
 			alturaPessoa = sc.nextDouble();
 			
-			vetor[i] = new Pessoa(nomePessoa, idadePessoa, alturaPessoa);
+			pessoas[i] = new Pessoa(nomePessoa, idadePessoa, alturaPessoa);
 		}
 		
 		double soma = 0.0;
 		
 		
-		for(int i = 0; i < vetor.length; i++) {
-			soma += vetor[i].getAltura();
+		for(int i = 0; i < pessoas.length; i++) {
+			soma += pessoas[i].getAltura();
 		}
-		for(int i = 0; i < vetor.length; i++) {
-			if(vetor[i].getIdade() < 16) {
+		
+		for(int i = 0; i < pessoas.length; i++) {
+			if(pessoas[i].getIdade() < 16) {
 				menores++;
-				System.out.printf("Nome dos menores: %s\n " ,vetor[i].getNome());
+				System.out.println(pessoas[i].getNome());
 				
 			}
 		}
@@ -58,10 +59,7 @@ public class vetor04 {
 		System.out.printf("\nQuantidade de menores: %d " , menores);
 		System.out.printf("\nPorcentagem de menores: %.2f " , porcentagem);
 		
-		
-
-		
-		
+	
 		 
 	}
 }
