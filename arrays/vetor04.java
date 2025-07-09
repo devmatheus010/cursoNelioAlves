@@ -47,6 +47,7 @@ public class vetor04 {
 		for(int i = 0; i < pessoas.length; i++) {
 			if(pessoas[i].getIdade() < 16) {
 				menores++;
+				System.out.println();
 				System.out.println(pessoas[i].getNome());
 				
 			}
@@ -55,6 +56,7 @@ public class vetor04 {
 		double media = soma / qtdPessoas;
 		double porcentagem = menores * 100 / qtdPessoas;
 		
+		System.out.println();
 		System.out.printf("Altura média: %.2f " , media);
 		System.out.printf("\nQuantidade de menores: %d " , menores);
 		System.out.printf("\nPorcentagem de menores: %.2f " , porcentagem);
